@@ -59,3 +59,32 @@ function teamCard(){
 // Richiamo la funzione 
 teamCard(team, container);
 
+
+// Bonus
+/*BONUS:
+Utilizziamo gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team: cliccando sul pulsante “add” viene creato un nuovo oggetto, il quale viene inserito nell’array iniziale, e viene stampata una nuova card con tutte le informazioni inserite dall’utente.*/
+
+// Creo le variabili per il form
+
+let nameInput = document.getElementById('name');
+let roleInput = document.getElementById('role');
+let imageInput = document.getElementById('image');
+let button = document.getElementById('addMemberButton');
+
+// Aggiungo l'evento al clic
+button.addEventListener('click', function(event){
+  event.preventDefault();
+
+  let nameNew = nameInput.value;
+  let roleNew = roleInput.value;
+  let imageNew = imageInput.value;
+
+  let newCard = {
+    name: nameNew,
+    role: roleNew,
+    image: imageNew
+  };
+  team.push(newCard);
+  teamCard(team, container);
+}) 
+// console.log (team);
