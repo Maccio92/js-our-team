@@ -37,7 +37,11 @@ const team = [
     },
   ];
 
-  let container = document.querySelector('.team-container');
+// Creo la variabile container dove inserire le card
+let container = document.querySelector('.team-container');
+
+// Creo la funzione per creare le card
+function teamCard(){
   for (let i = 0; i < team.length; i++) {
     let object = team[i];
     let card =`<div class="team-card">
@@ -51,5 +55,7 @@ const team = [
                 </div>`;
                 container.innerHTML += card;
   }
-  
-  
+}
+// Richiamo la funzione 
+teamCard(team, container);
+
