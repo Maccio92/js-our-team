@@ -37,19 +37,6 @@ const team = [
     },
   ];
 
-  let container = document.querySelector('.team-container');
-  for (let i = 0; i < team.length; i++) {
-    let object = team[i];
-    let card =`<div class="team-card">
-                  <div class="card-image">
-                    <img src="${object.image}" alt="${object.name}">
-                  </div>
-                  <div class="card-text">
-                    <h3>${object.name}</h3>
-                    <p>${object.role}</p>
-                  </div>
-                </div>`;
-                container.innerHTML += card;
-  }
+  
   
   
